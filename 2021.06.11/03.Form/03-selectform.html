@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>셀렉트 요소</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>셀렉트 만들기</h1>
+    <fieldset>
+        <legend>선택항목들</legend>
+        <p>과목선택
+            <select>
+                <option>html5</option>
+                <option>css</option>
+                <option>javascript</option>
+                <option>jquery</option>
+            </select>
+        </p>
+            <p>지역선택
+                <select>
+                    <optgroup label="마포구">
+                        <option>서교동</option>
+                        <option>동교동</option>
+                        <option>합정동</option> 
+                    </optgroup>
+                    
+                    <optgroup label="동대문구">
+                        <option>전농동</option>
+                        <option>이문동</option>
+                        <option>회기동</option> 
+                        <option>휘경동</option> 
+                    </optgroup>
+                </select>
+            </p>
+    </fieldset>
+</body>
+</html>
+
+<!--
+    <option></option>을 하면 선택가능한 내용이 나오고 
+    <optgroup label=""> <option></option>을 하면 optgroup의 label에서 준 내용은 선택이 안되며 option에서 준 내용만 선택이 가능하다.
+-->

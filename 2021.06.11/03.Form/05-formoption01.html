@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>required 속성</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <fieldset>
+        <legend>유효성 검사</legend>
+        <form>
+            <ul>
+                <li>
+                    <b>*</b>이름:
+                    <input type="text" required />                      
+                </li> 
+                <li>
+                    <b>*</b>아이디:
+                    <input type="text" required />
+                </li>
+                <li>
+                    <b>*</b>비밀번호:
+                    <input type="password" required />
+                </li>
+                <li>
+                    휴대폰:
+                    <input type="tel" />
+                </li>
+            </ul>
+            <input type="submit" value="제출" />
+        </form>
+    </fieldset>
+</body>
+</html>

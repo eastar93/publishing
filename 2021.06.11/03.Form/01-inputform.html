@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Input Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Input요소들</h1>
+    <form>
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>아이디 : <input type="text"/></p>
+            <p>비밀번호 : <input type="password"/></p>
+            <p>메일 수신여부 : <input type="radio" name="recieve"/>예<input type="radio" name="recieve"/>아니오</p>
+            <p>식사 여부 : <input type="radio" name="eat"/>먹음
+                          <input type="radio" name="eat"/>먹는중
+                          <input type="radio" name="eat"/>안먹음</p>
+            <p>
+                현재 공부중인 것
+                <input type="checkbox" name="ing"/> HTML
+                <input type="checkbox" name="ing"/> CSS
+                <input type="checkbox" name="ing"/> JS
+            </p>
+            <p> 제출
+                <input type="submit" value="전송">
+                <input type="reset" value="취소">
+                <input type="button" value="확인">
+            </p>
+        </fieldset>    
+    </form>
+</body>
+</html>
+
+<!--fieldset - 사각형으로 영역을 만들어준다.-->
+<!--input type="text"/"password" - text로 할경우 입력한 문자 그대로 나온다/password로 할경우 암호화 처리되서 나온다.-->
+<!--input type="radio" name = ??? - 라디오 버튼으로 name이 같은 것끼리 그룹이 되고 다중 일택을 해야한다.-->
+<!--input type="checkbox" name = ??? - 체크 박스로 name이 같은 것끼리 그룹이 되고 다중선택이 가능하다.-->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>테이블 병합</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>표 만들기</h1>
+    <h2>셀 병합하기</h2>
+
+    <table border="1">
+        <tr>
+            <td colspan="3">공연요금</td>
+        </tr>
+        <tr>
+            <td>구분</td>  
+            <td>S석</td>
+            <td>VIP석</td>
+        </tr>
+        <tr>
+            <td>성인</td>
+            <td>30,000원</td>
+            <td>50,000원</td>
+        </tr>
+        <tr>
+            <td>청소년</td>
+            <td>20,000원</td>
+            <td>40,000원</td>
+        </tr>
+        <tr>
+            <td>어린이</td>
+            <td colspan="2">보호자 동반시 무료</td>
+        </tr>
+        <tr>
+            <td rowspan="2">공연시간</td>
+            <td>1회</td>
+            <td>12시 ~ 14시</td>
+        </tr>
+        <tr>
+            <td>2회</td>
+            <td>18시 ~ 20시</td>
+        </tr>
+        
+    </table>
+</body>
+</html>
+
+<!--colspan="?"을 주면 ?칸짜리 행을 1칸으로 합쳐줍니다.-->
+<!--rowspan="?"을 주면 ?칸짜리 열을 1칸으로 합쳐줍니다.-->
