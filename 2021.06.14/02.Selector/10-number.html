@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box:after 
+        { 
+            content: "항목을 골라주세요.";
+            color: green;
+        }
+        /* .box:after는 해당 box라는 클래스 다음에 값을 추가해줄 수 있다. */
+        p:first-letter { font-size: 300%; }
+        /* :first-child는 해당 태그의 첫 글자를 font-size에서 설정한 크기만큼 증가한다. */
+        p { border-bottom: 1px dashed #000;}
+        /* dashed: 점선/solid: 실선 */
+        p:last-child {border: none;}
+    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Number</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="box">
+        <p>회사</p>
+        <p>상품</p>
+        <p>서비스</p>
+    </div>
+</body>
+</html>
