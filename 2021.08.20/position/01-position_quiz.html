@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    body { border: 1px solid black;
+            width: 600px; height: 500px; }
+    #header { border: 1px dotted red; 
+            width:600px; height: 99px; }
+    #body { border: 1px solid rgb(255, 230, 3);
+            position:relative; width: 600px; height: 299px; }
+    #footer { border: 1px dashed green;
+            width:600px; height: 99px; }
+    .sidebar { border: 1px solid steelblue; width: 150px; height: 299px; 
+                position: absolute; left: 0px; top: 0px; }
+    .content { border: 1px solid steelblue; width: 450px; height: 299px;
+                position: absolute; left: 150px; top: 0px; }
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="header">
+       <h1>헤더</h1>
+    </div>
+    <div id="body">
+      <div class="sidebar">
+          사이드바
+      </div>
+      <div class="content">
+          컨텐츠
+      </div>
+    </div>
+    <div id="footer">
+        <h1>푸터</h1>
+    </div>
+
+</body>
+</html>

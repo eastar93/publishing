@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    * { margin: 0; padding: 0; }
+    body { width: 550px; }
+    #header { border: 2px dotted red;
+            height: 100px; }
+    #body {border: 2px solid rgba(247, 231, 17, 0.89);
+            height: 300px; }
+    #footer { clear:both; border: 2px dashed green;
+            height: 100px; }
+    #body > div { display:inline-block; }
+    .leftside { float:left; border: 1px solid steelblue; width: 100px; height: 300px; }
+    .maincontent { float:left; border: 1px solid steelblue; width: 340px; height: 300px; } 
+    .rightside { float:right; border: 1px solid steelblue; width: 100px; height: 300px; }
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+        <div id="header">
+            헤더자리
+        </div>
+        <div id="body">
+            <div class="leftside">
+                왼쪽 사이드바<br/>
+            </div>
+            <div class="maincontent">
+                컨텐츠<br/>
+            </div>
+            <div class="rightside">
+                오른쪽 사이드바<br/>
+            </div>
+            </ul>
+        </div>
+        <div id="footer">
+            푸터자리
+        </div>
+</body>
+</html>
