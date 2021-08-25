@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 별을 찍어주세요.
+    // 별은 4단이고
+    // * 
+    // **
+    // ***
+    // ****
+    // 형태로 찍어주시면 됩니다. 중첩반복문을 써주세요.
+
+   var star = prompt("별의 층수를 입력해주세요.")
+    for(var i = 0; i < star; i++) {
+        for (var j = 0; j <= i; j++) {
+            document.write("*")
+        }
+        document.write("<br/>")    
+    }
+    
+    var star = prompt("별의 층수를 입력해주세요.")
+    for(var i = star; i >= 0; i--) {
+        for(var j = i; j > 0; j--) {
+            document.write("*")
+        }
+        document.write("<br/>")
+    }
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
