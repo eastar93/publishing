@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    var num = 0; // 그림 번호
+    
+    function nextPic() {
+        num++; // 다음 그림 번호로 이동
+        if(num > 2 ) { // 마지막 그림번호 초과시
+            num = 0; // 첫 그림 번호로 되돌리기
+        }
+        document.getElementById("pic").src = "images/img" + num + ".jpg";
+        // id가 pic인 요소(그림)의 src 속성을
+        // 1증가된 num을 이용해 바꿔줌 
+       
+        // 그림파일 크기 조정(width="300px"로 수정)
+        // document.getElementById("pic").width="300";
+
+        return false;
+        //그림 변경 후 링크 이동을 막기 위해 사용
+    }
+    // 문제 : prevPic 함수를 만들어서 사진을 뒤로 돌리는
+    // 로직도 추가해주세요.
+    function prevPic() {
+        num--;
+        if(num < 0) {
+            num = 2; 
+        }
+        document.getElementById("pic").src = "images/img" + num + ".jpg";
+        return false;
+    }
+    // 문제2 : 마지막 그림에서 next를 누르면 첫 그림으로 
+    // 첫 그림에서 prev를 누르면 마지막 그림으로 돌아가도록
+    // 로직을 수정해주세요.
+
+     
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    
+    <h1>이미지 넘기기</h1>
+    <a href="#" onclick="return prevPic()"><<</a>
+    
+    <img width="500px" height="500px" src="images/img0.jpg" id="pic">
+
+    <a href="#" onclick="return nextPic()">>></a>
+
+
+</body>
+</html>
