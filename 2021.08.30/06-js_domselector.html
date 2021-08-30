@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    
+</style>
+<script>
+    // 원거리 선택자
+    // 태그에 지정한 id를 이용해 특정 태그만 선택할 수 있는
+    // 선택자입니다.
+    // 선택대상 .getElementById("아이디명");
+
+    // 문서 로딩이 끝난 다음에 호출하도록
+    // window.onload 내부에 작성하겠습니다.
+    window.onload = function() {
+        // 여기에 작성해야 정상 실행
+        var myObj = document.getElementById("title");
+        console.log(myObj);
+        myObj.style.color = "blue";
+        console.log(myObj);
+
+        // 특정 태그들을 들고오기
+        // 선택대상.getElementsByTagName("태그명");
+
+        // 1. ul요소들 전체 선택
+        var myList = document.getElementsByTagName("ul");
+        console.log(myList[0]);
+        // 2. ul > li인 요소들 선택
+        var myLi = myList[0].getElementsByTagName("li");
+        console.log(myLi);
+
+        //myLi[0].style.border = "solid 1px #f00";
+        //myLi[1].style.border = "solid 1px #f00";
+
+        for(var i=0; i < myLi.length; i++) {
+            myLi[i].style.border = "solid 1px blue"
+        }
+
+        // 아래쪽 ul태그에 대해서
+        // 근거리 선택자의 li는 홀수번째는 녹색으로 
+        // 짝수번째는 노란색으로 테두리를 쳐주세요.
+        console.log(myList[1]);
+        var myLi2 = myList[1].getElementsByTagName("li");
+        for(var i = 0; i < myLi2.length; i++) {
+            if((i + 1) % 2 === 0) {
+                myLi2[i].style.border="solid 1px green"
+            } else {
+                myLi2[i].style.border="solid 1px yellow"
+            }
+        }
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div>
+        <h1>선택지</h1>
+        <h2 id="title">원거리 선택자</h2>
+        <ul>
+            <li>getElementById</li>
+            <li>getElementsByTagName</li>
+        </ul>
+        <h2>근거리 선택자</h2>
+        <ul id="list">
+            <li>parentNone</li>
+            <li>ChildNodes</li>
+            <li>childeren</li>
+            <li>firstChild</li>
+            <li>previousSibling</li>
+            <li>nextSibling</li>
+        </ul>
+    </div>
+</body>
+</html>
