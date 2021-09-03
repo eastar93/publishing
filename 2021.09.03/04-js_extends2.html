@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+</style>
+<script>
+    // 문제
+    // Person과 그것을 상속한 요소를 2개 만들어서
+    // 활용합니다.
+
+    // Person은 이름과 나이를 가집니다.
+    // 나머지 요소들은 각자 자기자신의 멤버변수 하나와 
+    // 자기 자신만 사용할 수 있는 메서드(행동)을
+    // 하나씩 가집니다.
+
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.setName = function(name) {
+        this.name = name;
+    }
+    Person.prototype.getName = function() {
+        return this.name;
+    }
+    Person.prototype.setAge = function(age) {
+        this.age = age;
+    }
+    Person.prototype.getAge = function() {
+        return this.age;
+    }
+    
+    function Student(name, age, major) {
+        
+        this.major = major;
+    }
+    Student.prototype = Person;
+
+    Student.prototype.setMajor = function(major) {
+        this.major = major;
+    }
+    Student.prototype.getMajor = function() {
+        return this.major;
+    }
+
+    Student.prototype.studying = function() {
+        console.log("학생이 " + this.major + "공부를 합니다.");
+    }
+    
+    var S1 = new Person("김학생", 24, "건축과");//어디가 문제죠?
+    Student.studying = S1;
+
+    function Developer(name, age, job) {
+        this.job = job
+    }
+    Developer.prototype.setJob = function(job) {
+        this.job = job;
+    }
+    Developer.prototype.getJob = function() {
+        return this.job;
+    }
+
+    Developer.prototype.dev = function() {
+        console.log("학생이 " + this.job + "을 합니다.");
+    }
+    var D1 = new Person("김개발", 29, "개발")
+    Developer.prototype = D1;
+    console.log(D1);
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
